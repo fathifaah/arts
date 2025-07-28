@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Student Registration Form</h2>
+  <form id="regForm">
+    <label>Admission Number: <input type="text" id="admission" required></label><br>
+
+    <label>Name: <input type="text" id="name" readonly></label><br>
+    <label>Class: <input type="text" id="class" readonly></label><br>
+    <label>Division: <input type="text" id="division" readonly></label><br>
+
+    <label>House:
+      <select id="house" required>
+        <option value="">Select</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+    </label><br>
+
+    <label>Category:
+      <select id="category" required>
+        <option value="">Select</option>
+        <option value="Sub Junior">Sub Junior</option>
+        <option value="Junior">Junior</option>
+        <option value="Senior">Senior</option>
+      </select>
+    </label><br>
+
+    <label>Items (Select multiple):<br>
+      <input type="checkbox" name="items" value="Drawing"> Drawing<br>
+      <input type="checkbox" name="items" value="Recitation"> Recitation<br>
+      <input type="checkbox" name="items" value="Storytelling"> Storytelling<br>
+      <input type="checkbox" name="items" value="Singing"> Singing<br>
+    </label><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
