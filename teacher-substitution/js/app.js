@@ -604,7 +604,7 @@
 
     rows.forEach(function (r) {
       var bar = el('div', {
-        style: 'height:8px;border-radius:4px;background:#1f6feb;width:' +
+        style: 'height:8px;border-radius:4px;background:var(--accent);width:' +
           (max ? Math.round((r.substitutions / max) * 100) : 0) + '%'
       });
       body.appendChild(el('tr', {}, [
@@ -848,5 +848,10 @@
     showView('plan');
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  // The page may already be parsed when this runs (inlined or injected copies).
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
