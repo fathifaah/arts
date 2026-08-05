@@ -1,0 +1,289 @@
+Day,Period,Class,Subject,Teacher Code
+Mon,1,8 A,Mathematics,T01
+Mon,1,8 B,Mathematics,T10
+Mon,1,9 A,Physics,T02
+Mon,1,9 B,Chemistry,T04
+Mon,1,10 A,Chemistry,T03
+Mon,1,10 B,English,T06
+Mon,2,8 A,English,T05
+Mon,2,8 B,English,T06
+Mon,2,9 A,Chemistry,T03
+Mon,2,9 B,Malayalam,T08
+Mon,2,10 A,Biology,T04
+Mon,2,10 B,Social Science,T09
+Mon,3,8 A,Physics,T02
+Mon,3,8 B,Biology,T03
+Mon,3,9 A,Biology,T04
+Mon,3,9 B,Social Science,T12
+Mon,3,10 A,English,T05
+Mon,3,10 B,Computer Science,T10
+Mon,4,8 A,Biology,T04
+Mon,4,8 B,Social Science,T09
+Mon,4,9 A,English,T05
+Mon,4,9 B,Computer Science,T10
+Mon,4,10 A,Hindi,T07
+Mon,4,10 B,Physical Education,T11
+Mon,5,8 A,Social Science,T09
+Mon,5,8 B,Malayalam,T08
+Mon,5,9 A,Hindi,T07
+Mon,5,9 B,Physical Education,T11
+Mon,5,10 A,Computer Science,T10
+Mon,5,10 B,Mathematics,T01
+Mon,6,8 A,Hindi,T07
+Mon,6,8 B,Chemistry,T04
+Mon,6,9 A,Social Science,T09
+Mon,6,9 B,Mathematics,T02
+Mon,6,10 A,Physical Education,T11
+Mon,6,10 B,Biology,T03
+Mon,7,8 A,Chemistry,T03
+Mon,7,8 B,Computer Science,T10
+Mon,7,9 A,Physical Education,T11
+Mon,7,9 B,Physics,T02
+Mon,7,10 A,Mathematics,T01
+Mon,7,10 B,English,T06
+Mon,8,8 A,Computer Science,T10
+Mon,8,8 B,Physical Education,T11
+Mon,8,9 A,Mathematics,T01
+Mon,8,9 B,Chemistry,T04
+Mon,8,10 A,Physics,T02
+Mon,8,10 B,Malayalam,T08
+Tue,1,8 A,Physical Education,T11
+Tue,1,8 B,Mathematics,T10
+Tue,1,9 A,Physics,T02
+Tue,1,9 B,Biology,T03
+Tue,1,10 A,Biology,T04
+Tue,1,10 B,Social Science,T09
+Tue,2,8 A,Mathematics,T01
+Tue,2,8 B,English,T06
+Tue,2,9 A,Chemistry,T03
+Tue,2,9 B,Malayalam,T08
+Tue,2,10 A,English,T05
+Tue,2,10 B,Computer Science,T10
+Tue,3,8 A,English,T05
+Tue,3,8 B,Physics,T02
+Tue,3,9 A,Biology,T04
+Tue,3,9 B,Social Science,T12
+Tue,3,10 A,Hindi,T07
+Tue,3,10 B,Physical Education,T11
+Tue,4,8 A,Physics,T02
+Tue,4,8 B,Biology,T03
+Tue,4,9 A,English,T05
+Tue,4,9 B,Computer Science,T10
+Tue,4,10 A,Social Science,T09
+Tue,4,10 B,Mathematics,T01
+Tue,5,8 A,Biology,T04
+Tue,5,8 B,Social Science,T09
+Tue,5,9 A,Hindi,T07
+Tue,5,9 B,Physical Education,T11
+Tue,5,10 A,Computer Science,T10
+Tue,5,10 B,Physics,T02
+Tue,6,8 A,Social Science,T09
+Tue,6,8 B,Malayalam,T08
+Tue,6,9 A,Computer Science,T10
+Tue,6,9 B,Mathematics,T02
+Tue,6,10 A,Physical Education,T11
+Tue,6,10 B,Chemistry,T04
+Tue,7,8 A,Hindi,T07
+Tue,7,8 B,Chemistry,T04
+Tue,7,9 A,Physical Education,T11
+Tue,7,9 B,Physics,T02
+Tue,7,10 A,Mathematics,T01
+Tue,7,10 B,Biology,T03
+Tue,8,8 A,Chemistry,T03
+Tue,8,8 B,Computer Science,T10
+Tue,8,9 A,Mathematics,T01
+Tue,8,9 B,Chemistry,T04
+Tue,8,10 A,Physics,T02
+Tue,8,10 B,English,T06
+Wed,1,8 A,Computer Science,T10
+Wed,1,8 B,Physical Education,T11
+Wed,1,9 A,Physics,T02
+Wed,1,9 B,Biology,T03
+Wed,1,10 A,Biology,T04
+Wed,1,10 B,Malayalam,T08
+Wed,2,8 A,Physical Education,T11
+Wed,2,8 B,Mathematics,T10
+Wed,2,9 A,Chemistry,T03
+Wed,2,9 B,English,T06
+Wed,2,10 A,English,T05
+Wed,2,10 B,Social Science,T09
+Wed,3,8 A,Mathematics,T01
+Wed,3,8 B,English,T06
+Wed,3,9 A,Biology,T04
+Wed,3,9 B,Malayalam,T08
+Wed,3,10 A,Hindi,T07
+Wed,3,10 B,Computer Science,T10
+Wed,4,8 A,English,T05
+Wed,4,8 B,Physics,T02
+Wed,4,9 A,Hindi,T07
+Wed,4,9 B,Social Science,T12
+Wed,4,10 A,Social Science,T09
+Wed,4,10 B,Physical Education,T11
+Wed,5,8 A,Physics,T02
+Wed,5,8 B,Biology,T03
+Wed,5,9 A,Social Science,T09
+Wed,5,9 B,Computer Science,T10
+Wed,5,10 A,Physical Education,T11
+Wed,5,10 B,Mathematics,T01
+Wed,6,8 A,Biology,T04
+Wed,6,8 B,Social Science,T09
+Wed,6,9 A,Computer Science,T10
+Wed,6,9 B,Physical Education,T11
+Wed,6,10 A,Mathematics,T01
+Wed,6,10 B,Physics,T02
+Wed,7,8 A,Social Science,T09
+Wed,7,8 B,Malayalam,T08
+Wed,7,9 A,Physical Education,T11
+Wed,7,9 B,Mathematics,T02
+Wed,7,10 A,Chemistry,T03
+Wed,7,10 B,Chemistry,T04
+Wed,8,8 A,Hindi,T07
+Wed,8,8 B,Chemistry,T04
+Wed,8,9 A,Mathematics,T01
+Wed,8,9 B,Physics,T02
+Wed,8,10 A,English,T05
+Wed,8,10 B,Biology,T03
+Thu,1,8 A,Chemistry,T03
+Thu,1,8 B,Computer Science,T10
+Thu,1,9 A,Physics,T02
+Thu,1,9 B,Chemistry,T04
+Thu,1,10 A,Hindi,T07
+Thu,1,10 B,English,T06
+Thu,2,8 A,Computer Science,T10
+Thu,2,8 B,Physical Education,T11
+Thu,2,9 A,Chemistry,T03
+Thu,2,9 B,English,T06
+Thu,2,10 A,Social Science,T09
+Thu,2,10 B,Malayalam,T08
+Thu,3,8 A,Physical Education,T11
+Thu,3,8 B,Mathematics,T10
+Thu,3,9 A,Biology,T04
+Thu,3,9 B,Malayalam,T08
+Thu,3,10 A,Mathematics,T01
+Thu,3,10 B,Social Science,T09
+Thu,4,8 A,Mathematics,T01
+Thu,4,8 B,English,T06
+Thu,4,9 A,English,T05
+Thu,4,9 B,Social Science,T12
+Thu,4,10 A,Physics,T02
+Thu,4,10 B,Computer Science,T10
+Thu,5,8 A,English,T05
+Thu,5,8 B,Physics,T02
+Thu,5,9 A,Hindi,T07
+Thu,5,9 B,Computer Science,T10
+Thu,5,10 A,Chemistry,T03
+Thu,5,10 B,Physical Education,T11
+Thu,6,8 A,Physics,T02
+Thu,6,8 B,Biology,T03
+Thu,6,9 A,Social Science,T09
+Thu,6,9 B,Physical Education,T11
+Thu,6,10 A,Biology,T04
+Thu,6,10 B,Mathematics,T01
+Thu,7,8 A,Biology,T04
+Thu,7,8 B,Social Science,T09
+Thu,7,9 A,Computer Science,T10
+Thu,7,9 B,Mathematics,T02
+Thu,7,10 A,English,T05
+Thu,7,10 B,Biology,T03
+Thu,8,8 A,Social Science,T09
+Thu,8,8 B,Malayalam,T08
+Thu,8,9 A,Physical Education,T11
+Thu,8,9 B,Physics,T02
+Thu,8,10 A,Hindi,T07
+Thu,8,10 B,English,T06
+Fri,1,8 A,Hindi,T07
+Fri,1,8 B,Chemistry,T04
+Fri,1,9 A,Mathematics,T01
+Fri,1,9 B,Biology,T03
+Fri,1,10 A,Social Science,T09
+Fri,1,10 B,Malayalam,T08
+Fri,2,8 A,Chemistry,T03
+Fri,2,8 B,Computer Science,T10
+Fri,2,9 A,Physics,T02
+Fri,2,9 B,English,T06
+Fri,2,10 A,Physical Education,T11
+Fri,2,10 B,Social Science,T09
+Fri,3,8 A,Computer Science,T10
+Fri,3,8 B,Physical Education,T11
+Fri,3,9 A,Chemistry,T03
+Fri,3,9 B,Malayalam,T08
+Fri,3,10 A,Mathematics,T01
+Fri,3,10 B,Physics,T02
+Fri,4,8 A,Physical Education,T11
+Fri,4,8 B,Mathematics,T10
+Fri,4,9 A,Biology,T04
+Fri,4,9 B,Social Science,T12
+Fri,4,10 A,Physics,T02
+Fri,4,10 B,Biology,T03
+Fri,5,8 A,Mathematics,T01
+Fri,5,8 B,English,T06
+Fri,5,9 A,English,T05
+Fri,5,9 B,Computer Science,T10
+Fri,5,10 A,Chemistry,T03
+Fri,5,10 B,Malayalam,T08
+Fri,6,8 A,English,T05
+Fri,6,8 B,Physics,T02
+Fri,6,9 A,Hindi,T07
+Fri,6,9 B,Physical Education,T11
+Fri,6,10 A,Biology,T04
+Fri,6,10 B,Social Science,T09
+Fri,7,8 A,Physics,T02
+Fri,7,8 B,Biology,T03
+Fri,7,9 A,Social Science,T09
+Fri,7,9 B,Chemistry,T04
+Fri,7,10 A,English,T05
+Fri,7,10 B,Computer Science,T10
+Fri,8,8 A,Biology,T04
+Fri,8,8 B,Social Science,T09
+Fri,8,9 A,Computer Science,T10
+Fri,8,9 B,Biology,T03
+Fri,8,10 A,Hindi,T07
+Fri,8,10 B,Physical Education,T11
+Sat,1,8 A,Social Science,T09
+Sat,1,8 B,Malayalam,T08
+Sat,1,9 A,Physical Education,T11
+Sat,1,9 B,English,T06
+Sat,1,10 A,Computer Science,T10
+Sat,1,10 B,Mathematics,T01
+Sat,2,8 A,Hindi,T07
+Sat,2,8 B,Chemistry,T04
+Sat,2,9 A,Mathematics,T01
+Sat,2,9 B,Malayalam,T08
+Sat,2,10 A,Physical Education,T11
+Sat,2,10 B,Physics,T02
+Sat,3,8 A,Chemistry,T03
+Sat,3,8 B,Computer Science,T10
+Sat,3,9 A,Physics,T02
+Sat,3,9 B,Social Science,T12
+Sat,3,10 A,Mathematics,T01
+Sat,3,10 B,Chemistry,T04
+Sat,4,8 A,Computer Science,T10
+Sat,4,8 B,Physical Education,T11
+Sat,4,9 A,Chemistry,T03
+Sat,4,9 B,Mathematics,T02
+Sat,4,10 A,Biology,T04
+Sat,4,10 B,English,T06
+Sat,5,8 A,Physical Education,T11
+Sat,5,8 B,Mathematics,T10
+Sat,5,9 A,Biology,T04
+Sat,5,9 B,Physics,T02
+Sat,5,10 A,English,T05
+Sat,5,10 B,Malayalam,T08
+Sat,6,8 A,Mathematics,T01
+Sat,6,8 B,English,T06
+Sat,6,9 A,English,T05
+Sat,6,9 B,Chemistry,T04
+Sat,6,10 A,Hindi,T07
+Sat,6,10 B,Social Science,T09
+Sat,7,8 A,English,T05
+Sat,7,8 B,Physics,T02
+Sat,7,9 A,Hindi,T07
+Sat,7,9 B,Biology,T03
+Sat,7,10 A,Social Science,T09
+Sat,7,10 B,Computer Science,T10
+Sat,8,8 A,Physics,T02
+Sat,8,8 B,Biology,T03
+Sat,8,9 A,Social Science,T09
+Sat,8,9 B,English,T06
+Sat,8,10 A,Computer Science,T10
+Sat,8,10 B,Physical Education,T11

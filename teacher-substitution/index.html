@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Substitution Planner</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="app-header no-print">
+  <div>
+    <h1 id="schoolName">School</h1>
+    <p class="tagline">Teacher substitution planner</p>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab is-active" data-view="plan">Daily plan</button>
+    <button class="tab" data-view="absences">Absences</button>
+    <button class="tab" data-view="teachers">Teachers</button>
+    <button class="tab" data-view="timetable">Timetable</button>
+    <button class="tab" data-view="reports">Reports</button>
+    <button class="tab" data-view="settings">Settings</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ------------------------------------------------------ daily plan -->
+  <section id="view-plan" class="view is-active">
+    <div class="toolbar no-print">
+      <label>Date
+        <input type="date" id="planDate">
+      </label>
+      <span id="planDayLabel" class="day-label"></span>
+      <button id="btnGenerate" class="primary">Generate plan</button>
+      <button id="btnSavePlan">Save plan</button>
+      <button id="btnPrint">Print notice</button>
+      <button id="btnExportPlan">Export CSV</button>
+    </div>
+
+    <div id="planStatus" class="status no-print"></div>
+
+    <div class="print-heading">
+      <h2 id="printSchool"></h2>
+      <p id="printDate"></p>
+      <p class="print-title">Substitution arrangement</p>
+    </div>
+
+    <div id="planEmpty" class="empty">
+      Pick a date and press <strong>Generate plan</strong>. Teachers marked absent
+      for that day will have their periods covered automatically.
+    </div>
+
+    <table class="grid" id="planTable" hidden>
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th>Class</th>
+          <th>Subject</th>
+          <th>Teacher on leave</th>
+          <th>Substitute</th>
+          <th class="no-print">Why</th>
+          <th class="no-print">Lock</th>
+        </tr>
+      </thead>
+      <tbody id="planBody"></tbody>
+    </table>
+
+    <div id="uncoveredBlock" hidden>
+      <h3 class="warn-heading">Not covered</h3>
+      <table class="grid">
+        <thead>
+          <tr><th>Period</th><th>Class</th><th>Subject</th><th>Teacher on leave</th><th>Reason</th></tr>
+        </thead>
+        <tbody id="uncoveredBody"></tbody>
+      </table>
+    </div>
+
+    <div id="noticeBlock" hidden>
+      <h3>Individual duty slips</h3>
+      <div id="notices" class="notices"></div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------- absences -->
+  <section id="view-absences" class="view">
+    <h2>Mark a teacher absent</h2>
+    <form id="absenceForm" class="card form-grid">
+      <label>Date
+        <input type="date" id="absDate" required>
+      </label>
+      <label>Teacher
+        <select id="absTeacher" required></select>
+      </label>
+      <label>Reason
+        <input type="text" id="absReason" placeholder="Sick leave, official duty…">
+      </label>
+      <fieldset class="periods">
+        <legend>Periods</legend>
+        <label class="inline">
+          <input type="checkbox" id="absFullDay" checked> Full day
+        </label>
+        <div id="absPeriods" class="period-boxes"></div>
+      </fieldset>
+      <button type="submit" class="primary">Add absence</button>
+    </form>
+
+    <h3>Absences on <span id="absListDate"></span></h3>
+    <table class="grid">
+      <thead>
+        <tr><th>Teacher</th><th>Periods</th><th>Reason</th><th>Periods to cover</th><th></th></tr>
+      </thead>
+      <tbody id="absenceBody"></tbody>
+    </table>
+  </section>
+
+  <!-- -------------------------------------------------------- teachers -->
+  <section id="view-teachers" class="view">
+    <h2>Teachers</h2>
+    <form id="teacherForm" class="card form-grid">
+      <input type="hidden" id="teacherId">
+      <label>Code
+        <input type="text" id="teacherCode" required placeholder="T13">
+      </label>
+      <label>Name
+        <input type="text" id="teacherName" required>
+      </label>
+      <label>Subjects <small>(separate with ;)</small>
+        <input type="text" id="teacherSubjects" placeholder="Physics; Mathematics">
+      </label>
+      <label class="inline">
+        <input type="checkbox" id="teacherReserve"> Reserve teacher (prefer for cover)
+      </label>
+      <div class="row-actions">
+        <button type="submit" class="primary">Save teacher</button>
+        <button type="button" id="teacherFormReset">Clear</button>
+      </div>
+    </form>
+
+    <div class="toolbar">
+      <label class="file-button">Import teachers CSV
+        <input type="file" id="importTeachers" accept=".csv,text/csv">
+      </label>
+      <button id="exportTeachers">Export teachers CSV</button>
+      <span class="hint">Columns: Code, Name, Subjects, Reserve</span>
+    </div>
+
+    <table class="grid">
+      <thead>
+        <tr><th>Code</th><th>Name</th><th>Subjects</th><th>Reserve</th><th>Periods/week</th><th></th></tr>
+      </thead>
+      <tbody id="teacherBody"></tbody>
+    </table>
+  </section>
+
+  <!-- ------------------------------------------------------- timetable -->
+  <section id="view-timetable" class="view">
+    <h2>Timetable</h2>
+    <div class="toolbar">
+      <label>View
+        <select id="ttMode">
+          <option value="class">By class</option>
+          <option value="teacher">By teacher</option>
+        </select>
+      </label>
+      <label>Show
+        <select id="ttTarget"></select>
+      </label>
+      <label class="file-button">Import timetable CSV
+        <input type="file" id="importTimetable" accept=".csv,text/csv">
+      </label>
+      <button id="exportTimetable">Export timetable CSV</button>
+      <span class="hint">Columns: Day, Period, Class, Subject, Teacher Code</span>
+    </div>
+    <div id="ttStatus" class="status"></div>
+    <div class="scroll-x">
+      <table class="grid timetable" id="ttTable"></table>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------------- reports -->
+  <section id="view-reports" class="view">
+    <h2>Substitution workload</h2>
+    <div class="toolbar">
+      <label>From <input type="date" id="repFrom"></label>
+      <label>To <input type="date" id="repTo"></label>
+      <button id="btnRunReport" class="primary">Show</button>
+      <button id="btnExportReport">Export CSV</button>
+    </div>
+    <p class="hint">Counts substitutions from saved plans only. Generate and save
+      each day's plan to keep the tally meaningful.</p>
+    <table class="grid">
+      <thead><tr><th>Teacher</th><th>Code</th><th>Substitutions</th><th></th></tr></thead>
+      <tbody id="reportBody"></tbody>
+    </table>
+
+    <h3>Saved plans</h3>
+    <table class="grid">
+      <thead><tr><th>Date</th><th>Day</th><th>Covered</th><th>Uncovered</th><th></th></tr></thead>
+      <tbody id="savedPlansBody"></tbody>
+    </table>
+  </section>
+
+  <!-- -------------------------------------------------------- settings -->
+  <section id="view-settings" class="view">
+    <h2>Settings</h2>
+    <form id="settingsForm" class="card form-grid">
+      <label>School name
+        <input type="text" id="setSchool">
+      </label>
+      <label>Periods per day
+        <input type="number" id="setPeriods" min="1" max="12">
+      </label>
+      <label>Max substitutions per teacher per day
+        <input type="number" id="setMaxDay" min="1" max="8">
+      </label>
+      <label>Max substitutions per teacher per week
+        <input type="number" id="setMaxWeek" min="1" max="30">
+      </label>
+      <fieldset class="periods">
+        <legend>Working days</legend>
+        <div id="setDays" class="period-boxes"></div>
+      </fieldset>
+      <label class="inline">
+        <input type="checkbox" id="setRelax">
+        If nobody is within the limits, assign anyway rather than leave a class alone
+      </label>
+      <button type="submit" class="primary">Save settings</button>
+    </form>
+
+    <h3>Backup</h3>
+    <div class="toolbar">
+      <button id="btnBackup">Download backup</button>
+      <label class="file-button">Restore backup
+        <input type="file" id="restoreBackup" accept=".json,application/json">
+      </label>
+      <button id="btnSeed">Reload sample school</button>
+      <button id="btnClear" class="danger">Erase everything</button>
+    </div>
+    <p class="hint">
+      Data lives in this browser only. Take a backup before clearing browser data
+      or moving to another computer.
+    </p>
+  </section>
+
+</main>
+
+<script src="js/csv.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
